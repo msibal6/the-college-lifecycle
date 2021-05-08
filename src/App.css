@@ -8,17 +8,21 @@ h1 {
 }
 
 
+.Count {
+  /* padding: 10px; */
+  margin: 24px;
+}
+
 #Mitchell {
   color:red;
   font-family: 'Courier New', Courier, monospace;
 }
 
 #Molly {
-  color:burlywood;
+  color:peru;
   font-family: 'Courier New';
-  font-size: 24px;
 }
 
 #Taylor {
-  color:brown;
+  color:goldenrod;
 }

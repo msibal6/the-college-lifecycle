@@ -33,8 +33,8 @@ class Clock extends Component {
   }
   render() {
     return (
-      <div>
-        <div className="Clock-days">
+      <div className="Clock">
+        <div className="days-left">
           {this.leading0(this.state.days)}: 
           {this.leading0(this.state.hours)}: 
           {this.leading0(this.state.minutes)}:

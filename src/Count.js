@@ -10,7 +10,7 @@ class Count extends Component {
 
   render() {
     return (
-      <div className="countdown" id={this.props.name}>
+      <div className="Count" id={this.props.name}>
         <div className="name">{this.props.name}</div>
         <div className="date">{this.state.deadline}</div>
         <Clock deadline={this.state.deadline} />
