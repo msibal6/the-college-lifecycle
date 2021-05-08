@@ -1,21 +1,21 @@
 import './App.css';
 import Sequoia37 from "./Sequoia37";
 import YayAreaAdulthood from "./YayAreaAdulthood";
-import Count from "./Count";
 
 import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  useHistory
 } from "react-router-dom";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <title>The College Life Cycles</title>
+        <title>The College Life Cycle</title>
         <ul>
           <li>
             <Link to="/1937D">Sequoia 37 Deforestation</Link>
