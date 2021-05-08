@@ -1,4 +1,4 @@
-#The College Lifecycle
+# The College Lifecycle
 # Table of Contents
 * [Introduction](#introduction)
 * [React](#react)
