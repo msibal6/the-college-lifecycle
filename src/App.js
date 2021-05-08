@@ -1,4 +1,5 @@
 import './App.css';
+import Sequoia37 from "./Sequoia37";
 import Count from "./Count";
 
 import React from "react";
@@ -25,12 +26,7 @@ function App() {
 
         <Switch>
           <Route exact path="/">
-            <div id="sequoia-37">
-              <h1>Countdown 2 Deforestation</h1>
-              <Count deadline="August 20, 2021" name="Molly" />
-              <Count deadline="August 10 2021" name="Mitchell" />
-              <Count deadline="July 27, 2021" name="Taylor" />
-            </div>
+            <Sequoia37/>
           </Route>
           <Route path="/about">
            <div id="yay-area">
