@@ -7,7 +7,7 @@
     * [yarn test](#yarn-test)
     * [yarn eject](#yarn-eject)
 # Introduction 
-    What is this project?
+What is this project?
 
 # Getting Started with Create React App
 
