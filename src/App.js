@@ -1,23 +1,13 @@
-import logo from './logo.svg';
+import Count from './Count';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Countdown 2 deforestation</h1>
+      <Count deadline="August 20, 2021" name="Molly"/>
+      <Count deadline="August 10 2021" name="Mitchell"/>
+      <Count deadline="July 27, 2021" name="Taylor"/>
     </div>
   );
 }
