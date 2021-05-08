@@ -1,7 +1,7 @@
+#The College Lifecycle
 # Table of Contents
-
 * [Introduction](#introduction)
-* [React](#getting-started-with-create-react-app)
+* [React](#react)
   * [Available Scripts](#available-scripts)
     * [yarn start](#yarn-start)
     * [yarn test](#yarn-test)
@@ -9,7 +9,7 @@
 # Introduction 
 What is this project?
 
-# Getting Started with Create React App
+# React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

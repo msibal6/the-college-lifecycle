@@ -27,7 +27,7 @@ function App() {
 
         <Switch>
            <Route exact path="/">
-            <p id="start-lifecycle">Choose your lifecycle</p>
+            <p id="chose-stage">Choose your stage of life</p>
           </Route>
           <Route  path="/1937D">
             <Sequoia37/>
