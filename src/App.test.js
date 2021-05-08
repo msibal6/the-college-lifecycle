@@ -1,24 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-
-test('Mitchell', () => {
+test('UI', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Mitchell/i);
-  expect(linkElement).toBeInTheDocument();
+  testLink("Sequoia 37 Deforestation");
+  testLink("Yay Area Adulthood");
 });
 
-test('Taylor', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Taylor/i);
+function testLink(linkText) {
+  const linkElement = screen.getByText(linkText);
   expect(linkElement).toBeInTheDocument();
-});
-
-
-test('Molly', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Molly/i);
-  expect(linkElement).toBeInTheDocument();
-});
-
-
+}

@@ -1,5 +1,6 @@
 import './App.css';
 import Sequoia37 from "./Sequoia37";
+import YayAreaAdulthood from "./YayAreaAdulthood";
 import Count from "./Count";
 
 import React from "react";
@@ -17,23 +18,22 @@ function App() {
         <title>The College Life Cycles</title>
         <ul>
           <li>
-            <Link to="/">Sequoia 37 Deforestation</Link>
+            <Link to="/1937D">Sequoia 37 Deforestation</Link>
           </li>
           <li>
-            <Link to="/about">Yay Area Adulthood</Link>
+            <Link to="/YAAdult">Yay Area Adulthood</Link>
           </li>
         </ul>
 
         <Switch>
-          <Route exact path="/">
+           <Route exact path="/">
+            <p id="start-lifecycle">Choose your lifecycle</p>
+          </Route>
+          <Route  path="/1937D">
             <Sequoia37/>
           </Route>
-          <Route path="/about">
-           <div id="yay-area">
-              <h2>Yay Area Adulthood</h2>
-              <Count deadline="August 20, 2021" name="hernan" />
-              <Count deadline="August 10 2021" name="Mitchell" />
-            </div>
+          <Route path="/YAAdult">
+           <YayAreaAdulthood/>
           </Route>
         </Switch>
 
