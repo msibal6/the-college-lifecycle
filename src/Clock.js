@@ -16,8 +16,8 @@ function Clock(props) {
     return num < 10 ? "0" + num : num;
   }
 
-  function getTimeUntil(selectedDeadline) {
-    const time = Date.parse(selectedDeadline) - Date.parse(new Date());
+  function getTimeUntil(deadline) {
+    const time = Date.parse(deadline) - Date.parse(new Date());
     if (time < 0) {
       setDeadline({
         days: 0,

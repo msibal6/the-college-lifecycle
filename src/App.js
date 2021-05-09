@@ -9,7 +9,6 @@ import {
   Switch,
   Route,
   Link,
-  useHistory
 } from "react-router-dom";
 
 function App() {
