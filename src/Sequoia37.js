@@ -2,8 +2,6 @@
 import Count from "./Count";
 import "./Sequoia37.css";
 
-
-
 function Sequoia37() {
     return (
         <div id="sequoia-37">

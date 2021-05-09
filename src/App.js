@@ -23,7 +23,6 @@ function App() {
           <li>
             <Link to="/YAAdult">Yay Area Adulthood</Link>
           </li>
-          <TestHistoryBtn />
         </ul>
 
         <Switch>
@@ -35,11 +34,6 @@ function App() {
           </Route>
           <Route path="/YAAdult">
             <YayAreaAdulthood />
-          </Route>
-          <Route path="/testHistory">
-            <p>
-              it is working
-            </p>
           </Route>
         </Switch>
 
