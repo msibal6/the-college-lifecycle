@@ -1,0 +1,13 @@
+.button-image {
+    background-color: chocolate;
+    border: 0;
+}
+/* 
+button {
+    background-color: transparent;
+} */
+
+.active {
+    border: 10;
+    border-color: black;
+}

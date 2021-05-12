@@ -23,6 +23,9 @@ function App() {
           <li>
             <Link to="/YAAdult">Yay Area Adulthood</Link>
           </li>
+          <li>
+            <TestHistoryBtn/>
+          </li>
         </ul>
 
         <Switch>

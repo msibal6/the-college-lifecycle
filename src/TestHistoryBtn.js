@@ -1,6 +1,7 @@
 import {
-    useHistory
+  useHistory
 } from "react-router-dom";
+import "./TestHistoryBtn.css"
 
 
 // testing useHistory React Hooks
@@ -12,9 +13,11 @@ function TestHistoryBtn() {
   }
 
   return (
-    <button type="button" onClick={handleClick}>
-      Go home
+    <button className="active button" onClick={handleClick}>
+      <img src={require('./images/sequoia_sketch.svg').default} alt="tree" height="32" width="32"/>
     </button>
+
+      // <img src={tree} height="200" width="200" alt="sequoia" onClick={handleClick}/>
   );
 }
 
