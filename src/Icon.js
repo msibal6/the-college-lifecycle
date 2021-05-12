@@ -16,7 +16,11 @@ function Icon(props) {
 
   function handleClick() {
     setActive(!active);
-    history.push(props.path);
+    if (active) {
+      history.push(props.path);
+    } else {
+      history.push("/");
+    }
   }
 
   function getActiveTree() {
@@ -30,22 +34,19 @@ function Icon(props) {
   return (
     <button className="active button" onClick={handleClick}>
       {/* <img src={require('./images/sequoia_sketch.svg').default} alt="tree" height="32" width="32"/> */}
-      <img src={getActiveTree()} alt="tree" height="32" width="32"/>
+      <img src={getActiveTree()} alt="tree" height="32" width="32" />
     </button>
 
-      // <img src={tree} height="200" width="200" alt="sequoia" onClick={handleClick}/>
+    // <img src={tree} height="200" width="200" alt="sequoia" onClick={handleClick}/>
   );
 }
 Icon.propTypes = {
-  activeImage: PropTypes.string.isRequired,
-  inactiveImage: PropTypes.string.isRequired,
+  stage: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
 }
 Icon.defaultProps = {
   stage: "1937D",
-  activeImage: "./images/sequioa_sketch.svg",
-  inactiveImage: "./images/sequioa_sketch",
-  path: "/sketch",
+  path: "/1937D",
 }
 
 export default Icon;
