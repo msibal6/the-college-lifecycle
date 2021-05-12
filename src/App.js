@@ -2,6 +2,7 @@ import './App.css';
 import Sequoia37 from "./Sequoia37";
 import YayAreaAdulthood from "./YayAreaAdulthood";
 import TestHistoryBtn from "./TestHistoryBtn";
+import Icon from "./Icon";
 
 import React from "react";
 import {
@@ -26,6 +27,7 @@ function App() {
           <li>
             <TestHistoryBtn/>
           </li>
+          <Icon/>
         </ul>
 
         <Switch>
