@@ -1,6 +1,7 @@
 # The College Lifecycle
 # Table of Contents
 * [Introduction](#introduction)
+* [Feature Plan](#feature-plan)
 * [React](#react)
   * [Available Scripts](#available-scripts)
     * [yarn start](#yarn-start)
@@ -8,6 +9,45 @@
     * [yarn eject](#yarn-eject)
 # Introduction 
 What is this project?
+
+# Feature Plan
+- Clickable Count
+  - click on a count
+  - count disappears
+- final video
+  - after clicking all the counts in all the stages of college
+  - video from me plays
+    - memo from me to me
+- cursor gifs for clicking on certain counts
+  - cursor image for being on a count
+  - cursor gif for clicking it
+    - tree falling for Sequioa 37  
+    - skateboard popping for YayAreaAdulthood
+    - asparagus pulling for veggie house
+- better icons
+- People list
+  - veggie house
+    - inactive icon 
+      - aspargus
+    - active icon
+      - asparugus flowers
+    - cursor gif 
+      - asparagus harvest
+  - 193 team
+    - inactive icon 
+      - liver
+    - active icon
+      - segmented liver
+    - cursor gif
+      - liver explosion
+  - joe sexson
+    - inactive icon
+      - boat on river
+    - active icon
+      - river
+    - cursor gif
+      - stroke 
+
 
 # React
 
