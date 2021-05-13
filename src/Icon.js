@@ -8,8 +8,6 @@ import { useState, useEffect } from "react";
 
 function Icon(props) {
   const history = useHistory();
-  const [active, setActive] = useState(true);
-
   function handleClick(e) {
     if (props.selectedIcon !== props.stage) {
       props.handleClick(props.stage);
@@ -20,21 +18,28 @@ function Icon(props) {
     }
   }
 
-  function getStatusIcon() {
-    const element = document.getElementById(props.stage);
-
-    console.log(props.selectedIcon);
+  // TODO refactor these two changes using strategy pattern
+  function changeButtonStyle() {
+    const IconButton = document.getElementById(props.stage)
     if (props.selectedIcon === props.stage) {
-      element.classList.add("is-active");
-      return Icons[props.stage].active;
+      IconButton.classList.add("is-active");
     } else {
-      element.classList.remove("is-active");
-      return Icons[props.stage].inactive;
+      IconButton.classList.remove("is-active");
+    }
+  }
+
+  function changeIcon() {
+    const iconImage = document.getElementById(props.stage + "-img");
+    if (props.selectedIcon === props.stage) {
+      iconImage.src = Icons[props.stage].active;
+    } else {
+      iconImage.src = Icons[props.stage].inactive;
     }
   }
 
   useEffect(() => {
-    document.getElementById(props.stage + "-img").src = getStatusIcon();
+    changeIcon();
+    changeButtonStyle();
   });
 
   return (
