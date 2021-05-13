@@ -4,11 +4,11 @@ import {
 import "./Icon.css";
 import PropTypes from "prop-types";
 import * as Icons from "./Icons";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 function Icon(props) {
   const history = useHistory();
-  function handleClick(e) {
+  function handleClick(_e) {
     if (props.selectedIcon !== props.stage) {
       props.handleClick(props.stage);
       history.push(props.path);
