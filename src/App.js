@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/">
             <p id="chose-stage">Choose your stage of life</p>
           </Route>
-          <Route path="/_1937D">
+          <Route path="/Sequoia37">
             <Sequoia37 />
           </Route>
           <Route path="/YAAdult">

@@ -50,8 +50,8 @@ Icon.propTypes = {
 }
 
 Icon.defaultProps = {
-  stage: "_1937D",
-  path: "/_1937D",
+  stage: "Sequoia37",
+  path: "/Sequoia37",
 }
 
 export default Icon;
