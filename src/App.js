@@ -1,34 +1,21 @@
 import './App.css';
-import Sequoia37 from "./Sequoia37";
-import YayAreaAdulthood from "./YayAreaAdulthood";
-import TestHistoryBtn from "./TestHistoryBtn";
-import Icon from "./Icon";
-
+import IconBar from './IconBar';
 import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
+
 } from "react-router-dom";
+import Sequoia37 from "./Sequoia37";
+import YayAreaAdulthood from "./YayAreaAdulthood";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <title>The College Life Cycle</title>
-        <ul>
-          <li>
-            <Link to="/1937D">Sequoia 37 Deforestation</Link>
-          </li>
-          <li>
-            <Link to="/YAAdult">Yay Area Adulthood</Link>
-          </li>
-          <li>
-            <TestHistoryBtn/>
-          </li>
-          <Icon/>
-        </ul>
+        <IconBar />
 
         <Switch>
           <Route exact path="/">
