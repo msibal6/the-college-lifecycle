@@ -1,5 +1,5 @@
-import active from "./sequoia_sketch.svg";
-import inactive from "./fallen_tree.svg";
+import inactive from "./sequoia_sketch.svg";
+import active from "./fallen_tree.svg";
 
 
 export { active, inactive };

@@ -13,22 +13,28 @@ function Icon(props) {
   function handleClick(e) {
     console.log(e.currentTarget.classList.contains("what"));
     setActive(!active);
-    if (active) {
+    if (!e.currentTarget.classList.contains("is-active")) {
       history.push(props.path);
     } else {
       history.push("/");
     }
+    e.currentTarget.classList.toggle("is-active");
   }
 
   function getStatusIcon() {
-    if (active) {
+    const element = document.getElementById(props.stage);
+    console.log(props.stage);
+    // console.log(element.classList);
+    if (!element || !element.classList.contains("is-active")) {
+      console.log(element);
+      return Icons[props.stage].inactive;
+    } else if (element.classList.contains("is-active")) {
       return Icons[props.stage].active;
     }
-    return Icons[props.stage].inactive;
   }
 
   return (
-    <button className="button what" onClick={props.buttonClick}>
+    <button className="icon-button" id={props.stage} onClick={handleClick}>
       <img src={getStatusIcon()} alt="tree" height="32" width="32" />
     </button>
   );

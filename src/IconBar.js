@@ -1,16 +1,13 @@
 import "./Icon.css";
 import PropTypes from "prop-types";
 import Icon from "./Icon";
+// import { useState } from "react";
 
 function IconBar(props) {
   console.log(props.children);
-  function handleClick(e) {
-    console.log("click from IconBar");
-  }
   return (
     <div>
-      <Icon onClick={() => { console.log("testing") }} buttonClick={handleClick} />
-      <Icon></Icon>
+      <Icon />
     </div>
   );
 }
