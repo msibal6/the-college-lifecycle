@@ -14,6 +14,9 @@ What is this project?
 - Clickable Count
   - click on a count
   - count disappears
+  - text from the actor shows up and
+    - they can click it away  
+    - if theey click another count, this one disappears 
 - final video
   - after clicking all the counts in all the stages of college
   - video from me plays
