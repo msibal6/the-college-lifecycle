@@ -9,6 +9,8 @@ import {
 } from 'react-router-dom';
 import Sequoia37 from './Sequoia37';
 import YayAreaAdulthood from './YayAreaAdulthood';
+import Stage from './Stage';
+import Actor from './Actor';
 
 function App() {
   return (
@@ -19,6 +21,11 @@ function App() {
         <Switch>
           <Route exact path="/">
             <h1>Choose your next path</h1>
+            <Stage>
+              <Actor />
+              <Actor />
+
+            </Stage>
           </Route>
           <Route path="/Sequoia37">
             <Sequoia37 />
