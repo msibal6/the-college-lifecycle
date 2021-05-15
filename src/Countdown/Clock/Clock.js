@@ -43,7 +43,6 @@ function Clock(props) {
   useEffect(() => {
     var interval = setInterval(() => getTimeUntil(props.deadline), 1000);
 
-
     // move clean up function to here:
     return () => {
       clearInterval(interval);

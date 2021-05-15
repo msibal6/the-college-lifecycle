@@ -1,0 +1,10 @@
+.icon-button {
+    /* border: 0; */
+    background-color: transparent;
+}
+
+.is-active {
+    border: 10;
+    border-color: black;
+    /* transform: scale(1.1); */
+}

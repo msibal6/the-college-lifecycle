@@ -1,11 +1,12 @@
-import Count from "./Count";
+import Actor from "./Actor";
+import "./YayAreaAdulthood.css";
 
 function YayAreaAdulthood() {
     return (
-        <div id="yay-area">
-            <h2>Yay Area Adulthood</h2>
-            <Count deadline="August 25, 2021" name="Hernan" />
-            <Count deadline="August 10, 2021" name="Mitchell" />
+        <div>
+            <h1 id="yay-area">Yay Area Adulthood</h1>
+            <Actor deadline="August 25, 2021" name="Hernan" />
+            <Actor deadline="August 10, 2021" name="Mitchell" id="Mitchell2" />
         </div>
     );
 }

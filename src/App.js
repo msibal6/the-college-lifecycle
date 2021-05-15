@@ -1,44 +1,47 @@
 import './App.css';
-import Sequoia37 from "./Sequoia37";
-import YayAreaAdulthood from "./YayAreaAdulthood";
-import TestHistoryBtn from "./TestHistoryBtn";
-
-import React from "react";
+import IconBar from './IconBar';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-} from "react-router-dom";
+  Redirect,
+
+} from 'react-router-dom';
+import Sequoia37 from './Sequoia37';
+import YayAreaAdulthood from './YayAreaAdulthood';
+import Stage from './Stage';
+import Actor from './Actor';
 
 function App() {
+  var test = true;
+  var testRedirect = true;
   return (
-    <Router>
-      <div className="App">
+    <div className="App">
+      <Router>
         <title>The College Life Cycle</title>
-        <ul>
-          <li>
-            <Link to="/1937D">Sequoia 37 Deforestation</Link>
-          </li>
-          <li>
-            <Link to="/YAAdult">Yay Area Adulthood</Link>
-          </li>
-        </ul>
-
+        <IconBar />
         <Switch>
+
+          {testRedirect ? <Redirect push exact from="/" to="/Sequoia37" /> : ""}
           <Route exact path="/">
-            <p id="chose-stage">Choose your stage of life</p>
+            <h1>Choose your next path</h1>
+            {/* {testRedirect ? <Redirect push to="/Sequoia37" /> : ""} */}
+
+            {test ? <Stage>
+              <Actor />
+              {/* <Actor /> */}
+            </Stage> : ""}
           </Route>
-          <Route path="/1937D">
+          <Route path="/Sequoia37">
             <Sequoia37 />
           </Route>
-          <Route path="/YAAdult">
+          <Route path="/YAAdulthood">
             <YayAreaAdulthood />
           </Route>
         </Switch>
-
-      </div>
-    </Router>
+      </Router>
+    </div>
 
   );
 }
