@@ -23,12 +23,15 @@ function College() {
 
   // pass this state to the different stages
   // they modify it with their own on click functions and 
+  var testRedirect = false;
+
   return (
     <div className="College">
       <title>The College Life Cycle</title>
       <Switch>
         <Route exact path="/">
           <h1>Choose your next path</h1>
+          {testRedirect ? <Redirect to="/Sequioa37" /> : ""}
         </Route>
         <Route path="/Sequoia37">
           <Sequoia37 />
@@ -36,7 +39,6 @@ function College() {
         <Route path="/YAAdulthood">
           <YayAreaAdulthood />
         </Route>
-        <Redirect
       </Switch>
     </div>
   );
