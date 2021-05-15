@@ -3,6 +3,8 @@ const Molly = "Tall and Proud";
 const Taylor = "switch switch bish";
 
 const Hernan = "Music Head Skate Skids";
+const Mitchell2 = "this where i want to end up, so i gotta "
+    + "repeat myself with the homie";
 
 const Joe = "rowboy";
 
@@ -26,6 +28,7 @@ export {
     Molly,
     Taylor,
     Hernan,
+    Mitchell2,
     Joe,
     Anna,
     Clo,

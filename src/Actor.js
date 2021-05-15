@@ -32,7 +32,7 @@ function Actor(props) {
     console.log(ownGrowth);
   }
   const [ownGrowth, setGrowth] = useState(growth.SMALL);
-
+  console.log(props.id);
   var passedId = props.id ? props.id : props.name;
 
   if (ownGrowth === growth.SMALL) {

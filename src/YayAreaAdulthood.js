@@ -6,7 +6,7 @@ function YayAreaAdulthood() {
         <div>
             <h1 id="yay-area">Yay Area Adulthood</h1>
             <Actor deadline="August 25, 2021" name="Hernan" />
-            <Actor deadline="August 10, 2021" name="Mitchell" />
+            <Actor deadline="August 10, 2021" name="Mitchell" id="Mitchell2" />
         </div>
     );
 }
