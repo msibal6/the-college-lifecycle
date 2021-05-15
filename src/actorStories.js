@@ -16,8 +16,10 @@ const Bryce = "im being trolled";
 const Miguel = "ios Device";
 const Viswanath = "kekeh";
 
-
+const Vannalee = "Happy endings lawyer and lisa pruitts beset student"
+    + " sorry katrina ";
 const David = "Pirates live in this dorm";
+
 const Stranger = "I'm calling back ;)";
 export {
     Mitchell,
@@ -34,5 +36,6 @@ export {
     Miguel,
     Viswanath,
     David,
+    Vannalee,
     Stranger,
 };
