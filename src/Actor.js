@@ -3,12 +3,14 @@ import PropTypes from "prop-types";
 import Clock from "./Clock";
 import { growth } from './growth';
 import * as actorStories from './actorStories';
+import Stage from "./Stage";
 function Actor(props) {
   var stageAwareness = {};
   if (props.stage) {
     stageAwareness = props.stage;
-    stageAwareness[`0`] = growth.GONE;
+    // stageAwareness[`0`] = growth.GONE;
   }
+  
   console.log(stageAwareness);
   function grow() {
     if (ownGrowth === growth.SMALL) {
@@ -28,7 +30,6 @@ function Actor(props) {
     // if im grown and i was not the selected actor 
     // im gone 
     console.log(ownGrowth);
-
   }
   const [ownGrowth, setGrowth] = useState(growth.SMALL);
 
@@ -57,12 +58,14 @@ function Actor(props) {
 
 Actor.defaultProps = {
   name: "Stranger",
-  deadline: "January 1, 2001"
+  deadline: "January 1, 2001",
 }
 
 Actor.propTypes = {
   name: PropTypes.string.isRequired,
   deadline: PropTypes.string.isRequired,
+  stage: PropTypes.array,
+  handleClick: PropTypes.func,
 }
 
 export default Actor;

@@ -1,36 +1,45 @@
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React, { cloneElement, useState } from "react";
 import Actor from "./Actor";
 import { growth } from "./growth";
 
 function Stage(props) {
+    function handleClick(e) {
+        console.log("clicked at the stage level");
+    }
     console.log(props.children[0]);
-    console.log(props.children[0].props);
     var initialStage = [];
     // eslint-disable-next-line
     var children = [];
-
     for (let i = 0; i < props.children.length; i++) {
-        initialStage.push(growth.SMALL);
+        let actor = {};
+        actor.name = props.children[i].props.name;
+        actor.growth = growth.SMALL;
+        initialStage.push(actor);
         // TODO use clone element to pass custom props about stage state to 
         // the actors in this stage
     }
 
+
     // eslint-disable-next-line
     const [stage, setStage] = useState(initialStage);
-    const [selectedActor, selectActor] = useState(-1);
+    var element = <div>asdfadsf</div>;
+    var newProps = {}
+    newProps.handleClick = handleClick;
+    newProps.stage = stage;
+    console.log(newProps);
+    var clonedElement = cloneElement(props.children, newProps);
+    console.log(clonedElement);
+    // const [selectedActor, selectActor] = useState(-1);
     return (
-        <div>
-            {props.children}
-            <Actor stage={stage}/>
-        </div>
+        <div>{clonedElement}</div>
     );
 }
 
 Stage.propTypes = {
     test: PropTypes.string,
     children: PropTypes
-        .oneOfType([PropTypes.instanceOf(Actor), PropTypes.arrayOf(Actor)])
+        .oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)])
         .isRequired,
 }
 

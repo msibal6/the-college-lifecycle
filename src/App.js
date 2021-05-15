@@ -23,7 +23,7 @@ function App() {
             <h1>Choose your next path</h1>
             <Stage>
               <Actor />
-              <Actor />
+              {/* <Actor /> */}
 
             </Stage>
           </Route>
