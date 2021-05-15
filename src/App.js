@@ -22,9 +22,11 @@ function App() {
         <title>The College Life Cycle</title>
         <IconBar />
         <Switch>
+
+          {testRedirect ? <Redirect push exact from="/" to="/Sequoia37" /> : ""}
           <Route exact path="/">
             <h1>Choose your next path</h1>
-            {testRedirect ? <Redirect push to="/Sequoia37" /> : ""}
+            {/* {testRedirect ? <Redirect push to="/Sequoia37" /> : ""} */}
 
             {test ? <Stage>
               <Actor />

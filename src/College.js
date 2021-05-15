@@ -31,7 +31,7 @@ function College() {
       <Switch>
         <Route exact path="/">
           <h1>Choose your next path</h1>
-          {testRedirect ? <Redirect to="/Sequioa37" /> : ""}
+          {testRedirect ? <Redirect push to="/Sequioa37" /> : ""}
         </Route>
         <Route path="/Sequoia37">
           <Sequoia37 />
