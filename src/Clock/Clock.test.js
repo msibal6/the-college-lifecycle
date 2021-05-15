@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import Clock from "./Clock";
-import testStringPresent from "./testHelper";
+import Clock from "./index.js";
+// import testStringPresent from "./testHelper";
 
 test('00', () => {
   render(<Clock/>);
@@ -8,4 +8,4 @@ test('00', () => {
         expect(linkElement).toBeInTheDocument();
 })
 
-testStringPresent(":", Clock);
+// testStringPresent(":", Clock);

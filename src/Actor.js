@@ -3,14 +3,13 @@ import PropTypes from "prop-types";
 import Clock from "./Clock";
 import { growth } from './growth';
 import * as actorStories from './actorStories';
-import Stage from "./Stage";
 function Actor(props) {
   var stageAwareness = {};
   if (props.stage) {
     stageAwareness = props.stage;
     // stageAwareness[`0`] = growth.GONE;
   }
-  
+
   console.log(stageAwareness);
   function grow() {
     if (ownGrowth === growth.SMALL) {
