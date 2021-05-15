@@ -11,20 +11,18 @@ function Stage(props) {
     var children = [];
 
     for (let i = 0; i < props.children.length; i++) {
-        let child = {}
-        child["index"] = i;
-        child["state"] = growth.SMALL;
-        initialStage.push(child);
+        initialStage.push(growth.SMALL);
         // TODO use clone element to pass custom props about stage state to 
         // the actors in this stage
     }
 
     // eslint-disable-next-line
     const [stage, setStage] = useState(initialStage);
+    const [selectedActor, selectActor] = useState(-1);
     return (
         <div>
             {props.children}
-
+            <Actor stage={stage}/>
         </div>
     );
 }
