@@ -8,7 +8,7 @@ function GoodBye(props) {
 
     return (
         <div>
-            <video src={victorvideo} height="300" width="400" ßpreload="auto" controls=" "></video>
+            <video src={victorvideo} height="300" width="400" preload="auto" controls=" "></video>
                  {/* <ReactPlayer  controls height="20" width="30" url={victorvideo} /> */}
         </div>
 );
