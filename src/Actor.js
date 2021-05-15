@@ -4,14 +4,12 @@ import { growth } from './growth';
 import * as actorStories from './actorStories';
 import './Actor.css';
 import CountDown from "./Countdown";
+
 function Actor(props) {
-  var stageAwareness = {};
   if (props.stage) {
-    stageAwareness = props.stage;
-    // stageAwareness[`0`] = growth.GONE;
+    var stageAwareness = props.stage;
   }
 
-  console.log(stageAwareness);
   function grow() {
     if (ownGrowth === growth.SMALL) {
       setGrowth(growth.GROWN);
@@ -23,16 +21,10 @@ function Actor(props) {
   function handleClick() {
     console.log(props.name + "div called onclick");
     grow();
-    // if im small 
-    // i gte to be grown 
-    // if im grown 
-    // i get GONE
-    // if im grown and i was not the selected actor 
-    // im gone 
     console.log(ownGrowth);
   }
+  
   const [ownGrowth, setGrowth] = useState(growth.SMALL);
-  console.log(props.id);
   var passedId = props.id ? props.id : props.name;
 
   if (ownGrowth === growth.SMALL) {
