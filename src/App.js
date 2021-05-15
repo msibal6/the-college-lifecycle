@@ -13,6 +13,7 @@ import Stage from './Stage';
 import Actor from './Actor';
 
 function App() {
+  var test = false;
   return (
     <div className="App">
       <Router>
@@ -21,11 +22,12 @@ function App() {
         <Switch>
           <Route exact path="/">
             <h1>Choose your next path</h1>
-            <Stage>
+              {test}
+
+            {test ?  <Stage>
               <Actor />
               {/* <Actor /> */}
-
-            </Stage>
+            </Stage> : ""}
           </Route>
           <Route path="/Sequoia37">
             <Sequoia37 />
