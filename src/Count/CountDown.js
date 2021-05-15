@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Clock from "./Clock";
 
-function Count(props) {
+function CountDown(props) {
   function handleClick() {
     console.log(props.name + "div called onclick");
   }
@@ -16,14 +16,14 @@ function Count(props) {
   );
 }
 
-Count.defaultProps = {
+CountDown.defaultProps = {
   name: "Stranger",
   deadline: "January 1, 2001"
 }
 
-Count.propTypes = {
+CountDown.propTypes = {
   name: PropTypes.string.isRequired,
   deadline: PropTypes.string.isRequired
 }
 
-export default Count;
+export default CountDown;

@@ -1,14 +1,14 @@
 
-import Count from "./Count";
+import CountDown from "./Count";
 import "./Sequoia37.css";
 
 function Sequoia37() {
     return (
         <div >
             <h1 id="Sequoia37">Countdown 2 Deforestation</h1>
-            <Count deadline="August 20, 2021" name="Molly" />
-            <Count deadline="August 10, 2021" name="Mitchell" />
-            <Count deadline="July 27, 2021" name="Taylor" />
+            <CountDown deadline="August 20, 2021" name="Molly" />
+            <CountDown deadline="August 10, 2021" name="Mitchell" />
+            <CountDown deadline="July 27, 2021" name="Taylor" />
         </div>
     );
 }

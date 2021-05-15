@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import Clock from "./Clock";
 import { growth } from './growth';
 import * as actorStories from './actorStories';
+import CountDown from "./Count";
 function Actor(props) {
   var stageAwareness = {};
   if (props.stage) {
@@ -34,25 +34,22 @@ function Actor(props) {
 
   if (ownGrowth === growth.SMALL) {
     return (
-      <div className="Count" id={props.name} onClick={handleClick}>
-        <div className="name">{props.name}</div>
-        <div className="date">{props.deadline}</div>
-        <Clock deadline={props.deadline} />
+      <div className="Actor" id={props.name} onClick={handleClick}>
+        <CountDown deadline={props.deadline} name={props.name} />
       </div>
     );
   } else if (ownGrowth === growth.GROWN) {
     return (
-      <div className="Count" id={props.name} onClick={handleClick}>
+      <div className="Actor" id={props.name} onClick={handleClick}>
         {actorStories[props.name]}
       </div>
     );
   } else {
     return (
-      <div className="Count" id={props.name}>
+      <div className="Actor" id={props.name}>
       </div>
     );
   }
-
 }
 
 Actor.defaultProps = {
