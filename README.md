@@ -9,10 +9,15 @@
     * [yarn eject](#yarn-eject)
 # Introduction 
 What is this project?
+This is a web app counting down when we go (or at least when we change from one 
+chapter to the next). The changes from one stage to the other are not 
+immediately obvio, but they show themselves eventually... 
+
+
 
 # Feature Plan
-- UI Polish 
 - better icons
+- UI Polish 
   - feedback for clicking on 
     - icon 
       - click sound
