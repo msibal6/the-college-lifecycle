@@ -8,16 +8,11 @@ import {
 } from 'react-router-dom';
 import Sequoia37 from './Sequoia37';
 import YayAreaAdulthood from './YayAreaAdulthood';
-import Goodbye from './GoodBye';
 import { useState } from 'react';
 import { growth } from './growth';
-import { useEffect } from 'react';
 import Home from './Home';
 
-
 function App() {
-
-
   const [college, enrollCollege] = useState({
     Sequoia37: {
       Mitchell: growth.SMALL,
@@ -29,27 +24,6 @@ function App() {
       Mitchell2: growth.SMALL,
     }
   });
-
-  // const [collegeDone, finishCollege] = useState(false);
-
-  // function isCollegeOver() {
-  //   // var collegeOver = true;
-  //   for (var stage in college) {
-  //     for (var actor in stage) {
-  //       console.log(actor);
-  //       if (actor !== growth.GONE) {
-  //         console.log("quick fail");
-  //         return false;
-  //       }
-  //     }
-  //   }
-  //   return true;
-  // }
-
-  // var collegeDone = false;
-  // useEffect(() => {
-  //   finishCollege(isCollegeOver());
-  // }, [college, collegeDone]);
 
   return (
     <div className="App">
@@ -69,7 +43,6 @@ function App() {
         </Switch>
       </Router>
     </div>
-
   );
 }
 
