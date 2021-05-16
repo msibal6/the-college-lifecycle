@@ -4,39 +4,50 @@ import { growth } from './growth';
 import * as actorStories from './actorStories';
 import './Actor.css';
 import CountDown from "./Countdown";
+import { useEffect } from "react";
 
 function Actor(props) {
-  if (props.stage) {
-    var stageAwareness = props.stage;
+  if (props.college) {
+    var collegeExperience = props.college;
   }
 
+  const [ownGrowth, setGrowth] = useState(growth.SMALL);
+  var usedId = props.id ? props.id : props.name;
+  // setGrowth((collegeExperience[props.stage])[usedId]);
+
   function grow() {
-    if (ownGrowth === growth.SMALL) {
-      setGrowth(growth.GROWN);
-    } else if (ownGrowth === growth.GROWN) {
-      setGrowth(growth.GONE);
+    if ((collegeExperience[props.stage])[usedId] === growth.SMALL) {
+      (collegeExperience[props.stage])[usedId] = growth.GROWN;
+      setGrowth((collegeExperience[props.stage])[usedId]);
+
+    } else if ((collegeExperience[props.stage])[usedId] === growth.GROWN) {
+      (collegeExperience[props.stage])[usedId] = growth.GONE;
+      setGrowth((collegeExperience[props.stage])[usedId]);
+
     }
   }
 
   function handleClick() {
-    console.log(props.name + "div called onclick");
     grow();
-    console.log(ownGrowth);
+    props.enrollCollege(collegeExperience);
   }
-  
-  const [ownGrowth, setGrowth] = useState(growth.SMALL);
-  var passedId = props.id ? props.id : props.name;
 
-  if (ownGrowth === growth.SMALL) {
+  // useEffect(() => {
+  //   setGrowth((props.college[props.stage])[usedId]);
+  // }, [props.college, props.stage, usedId]);
+
+
+  if (ownGrowth === growth.SMALL && (collegeExperience[props.stage])[usedId] === growth.SMALL) {
+    console.log("we are small now");
     return (
-      <div className="Actor-Countdown" id={passedId} onClick={handleClick}>
+      <div className="Actor-Countdown" id={usedId} onClick={handleClick}>
         <CountDown deadline={props.deadline} name={props.name} />
       </div>
     );
-  } else if (ownGrowth === growth.GROWN) {
+  } else if (ownGrowth === growth.GROWN && (collegeExperience[props.stage])[usedId] === growth.GROWN) {
     return (
       <div className="Actor-story" id={props.name} onClick={handleClick}>
-        {actorStories[passedId]}
+        {actorStories[usedId]}
       </div>
     );
   } else {
@@ -54,10 +65,11 @@ Actor.defaultProps = {
 
 Actor.propTypes = {
   name: PropTypes.string.isRequired,
-  id: PropTypes.string,
   deadline: PropTypes.string.isRequired,
-  stage: PropTypes.array,
+  id: PropTypes.string,
+  stage: PropTypes.string,
   handleClick: PropTypes.func,
+  college: PropTypes.object
 }
 
 export default Actor;

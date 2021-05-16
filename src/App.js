@@ -8,8 +8,49 @@ import {
 } from 'react-router-dom';
 import Sequoia37 from './Sequoia37';
 import YayAreaAdulthood from './YayAreaAdulthood';
+import Goodbye from './GoodBye';
+import { useState } from 'react';
+import { growth } from './growth';
+import { useEffect } from 'react';
+import Home from './Home';
+
 
 function App() {
+
+
+  const [college, enrollCollege] = useState({
+    Sequoia37: {
+      Mitchell: growth.SMALL,
+      Molly: growth.SMALL,
+      Taylor: growth.SMALL,
+    },
+    YayAreaAdulthood: {
+      Hernan: growth.SMALL,
+      Mitchell2: growth.SMALL,
+    }
+  });
+
+  // const [collegeDone, finishCollege] = useState(false);
+
+  // function isCollegeOver() {
+  //   // var collegeOver = true;
+  //   for (var stage in college) {
+  //     for (var actor in stage) {
+  //       console.log(actor);
+  //       if (actor !== growth.GONE) {
+  //         console.log("quick fail");
+  //         return false;
+  //       }
+  //     }
+  //   }
+  //   return true;
+  // }
+
+  // var collegeDone = false;
+  // useEffect(() => {
+  //   finishCollege(isCollegeOver());
+  // }, [college, collegeDone]);
+
   return (
     <div className="App">
       <Router>
@@ -17,13 +58,13 @@ function App() {
         <IconBar />
         <Switch>
           <Route exact path="/">
-            <h1>Choose your next path</h1>
+            <Home college={college} />
           </Route>
           <Route path="/Sequoia37">
-            <Sequoia37 />
+            <Sequoia37 enrollCollege={enrollCollege} college={college} />
           </Route>
           <Route path="/YAAdulthood">
-            <YayAreaAdulthood />
+            <YayAreaAdulthood enrollCollege={enrollCollege} college={college} />
           </Route>
         </Switch>
       </Router>

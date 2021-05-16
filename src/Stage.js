@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import React, { cloneElement, useState } from "react";
-import Actor from "./Actor";
 import { growth } from "./growth";
 
 function Stage(props) {
