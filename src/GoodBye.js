@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import victorvideo from "./videos/Victor's Last Set.mp4";
+import ReactPlayer from 'react-player';
 
 
 function GoodBye(props) {
