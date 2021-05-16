@@ -11,15 +11,26 @@
 What is this project?
 
 # Feature Plan
-- Extract state from all the clickable Actors
-  - should maybe rename to something betters
+- UI Polish 
+- better icons
+  - feedback for clicking on 
+    - icon 
+      - click sound
+    - actor
+      - click sound
+  - Hovering on 
+    - icon
+      - gets bigger
+    - actor
+      - opacity changes
+  - Transition between actor stages
+    - seems cool but it might be hard given my current renderign workflow
 - cursor gifs for clicking on certain counts
   - cursor image for being on a count
   - cursor gif for clicking it
     - tree falling for Sequioa 37  
     - skateboard popping for YayAreaAdulthood
     - asparagus pulling for veggie house
-- better icons
 - People list
   - veggie house
     - inactive icon 
@@ -42,6 +53,13 @@ What is this project?
       - river
     - cursor gif
       - stroke 
+  - Vannalee
+    - inactive icon 
+      - open case
+    - active icon 
+      - closed case
+    - cursor gif
+      - closing the case
 
 
 # React
