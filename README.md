@@ -16,7 +16,6 @@ immediately obvio, but they show themselves eventually...
 
 
 # Feature Plan
-- better icons
 - UI Polish 
   - feedback for clicking on 
     - icon 
@@ -30,6 +29,7 @@ immediately obvio, but they show themselves eventually...
       - opacity changes
   - Transition between actor stages
     - seems cool but it might be hard given my current renderign workflow
+- better icons
 - cursor gifs for clicking on certain counts
   - cursor image for being on a count
   - cursor gif for clicking it

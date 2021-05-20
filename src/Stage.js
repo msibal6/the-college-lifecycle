@@ -6,6 +6,7 @@ function Stage(props) {
     function handleClick(e) {
         console.log("clicked at the stage level");
     }
+
     console.log(props.children[0]);
     var initialStage = [];
     // eslint-disable-next-line
@@ -19,17 +20,14 @@ function Stage(props) {
         // the actors in this stage
     }
 
-
     // eslint-disable-next-line
     const [stage, setStage] = useState(initialStage);
-    var element = <div>asdfadsf</div>;
     var newProps = {}
     newProps.handleClick = handleClick;
     newProps.stage = stage;
     console.log(newProps);
     var clonedElement = cloneElement(props.children, newProps);
     console.log(clonedElement);
-    // const [selectedActor, selectActor] = useState(-1);
     return (
         <div>{clonedElement}</div>
     );
@@ -41,6 +39,5 @@ Stage.propTypes = {
         .oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)])
         .isRequired,
 }
-
 
 export default Stage;
