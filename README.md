@@ -21,15 +21,12 @@ immediately obvio, but they show themselves eventually...
     - icon 
       - click sound
     - actor
-      - click sound
-  - Hovering on 
-    - icon
-      - gets bigger
-    - actor
-      - opacity changes
+      - whoosing sound when it finally disappears
   - Transition between actor stages
     - seems cool but it might be hard given my current renderign workflow
 - better icons
+  - match the tree from sequoia 
+  - match the old and new bay bridges
 - cursor gifs for clicking on certain counts
   - cursor image for being on a count
   - cursor gif for clicking it
@@ -58,6 +55,11 @@ immediately obvio, but they show themselves eventually...
       - river
     - cursor gif
       - stroke 
+  - Siena
+    - inactive icon
+      - hawaii flag
+    - active icon
+      - icon korean flag
   - Vannalee
     - inactive icon 
       - open case
