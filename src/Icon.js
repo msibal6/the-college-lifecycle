@@ -23,7 +23,9 @@ function Icon(props) {
     const IconButton = document.getElementById(props.stage)
     if (props.selectedIcon === props.stage) {
       IconButton.classList.add("is-active");
+      IconButton.classList.remove("is-inactive");
     } else {
+      IconButton.classList.add("is-inactive");
       IconButton.classList.remove("is-active");
     }
   }
@@ -44,7 +46,7 @@ function Icon(props) {
 
   return (
     <button className="icon-button" id={props.stage} onClick={handleClick}>
-      <img alt={props.stage} id={props.stage + "-img"} height="32" width="32" />
+      <img className="img" alt={props.stage} id={props.stage + "-img"} height="32" width="32" />
     </button>
   );
 }

@@ -1,10 +1,28 @@
-.icon-button {
-    /* border: 0; */
+.icon-button.is-active{
+    border-bottom: 10px black;
     background-color: transparent;
+    /* transform: scale(1.1); */
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: lightskyblue;
+}
+.icon-button.is-inactive {
+    border: none;
+    background-color: transparent;
+    margin-right: 3px;
+    margin-left: 3px;
 }
 
-.is-active {
-    border: 10;
-    border-color: black;
-    /* transform: scale(1.1); */
+.icon-button:hover {
+    transform: scale(1.3);
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+
+img {
+    border-color: transparent;
 }

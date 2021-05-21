@@ -1,3 +1,6 @@
-.Actor-story {
+.Actor {
     margin: 24px;
+}
+.Actor:hover {
+    opacity: 0.5;
 }
