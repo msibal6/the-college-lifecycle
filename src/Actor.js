@@ -4,8 +4,11 @@ import { growth } from './growth';
 import * as actorStories from './actorStories';
 import './Actor.css';
 import CountDown from "./Countdown";
+import * as sounds from './Sounds';
+import useSound from "use-sound";
 
 function Actor(props) {
+  const [playWhoosh] = useSound(sounds.whoosh, { volume: 0.05 });
   var usedId = props.id ? props.id : props.name;
   if (props.college) {
     var collegeExperience = props.college;
@@ -18,6 +21,7 @@ function Actor(props) {
       (collegeExperience[props.stage])[usedId] = growth.GROWN;
     } else if ((collegeExperience[props.stage])[usedId] === growth.GROWN) {
       (collegeExperience[props.stage])[usedId] = growth.GONE;
+      playWhoosh();
     }
     setGrowth((collegeExperience[props.stage])[usedId]);
   }

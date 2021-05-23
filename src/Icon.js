@@ -5,6 +5,8 @@ import "./Icon.css";
 import PropTypes from "prop-types";
 import * as Icons from "./Icons";
 import { useEffect } from "react";
+// eslint-disable-next-line
+import useSound from 'use-sound';
 
 function Icon(props) {
   const history = useHistory();

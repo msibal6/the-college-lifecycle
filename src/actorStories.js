@@ -21,7 +21,7 @@ const Viswanath = "kekeh";
 const Vannalee = "Happy endings lawyer and lisa pruitts beset student"
     + " sorry katrina ";
 
-const Siena = "Annyoeong ha saeso, lesso"
+const Siena = "Annyoeong ha saeso, lesgoao"
 
 const David = "Pirates live in this dorm";
 
@@ -50,5 +50,6 @@ export {
     Viswanath,
     David,
     Vannalee,
+    Siena,
     Stranger,
 };

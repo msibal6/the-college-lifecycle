@@ -20,8 +20,6 @@ immediately obvio, but they show themselves eventually...
   - feedback for clicking on 
     - icon 
       - click sound
-    - actor
-      - whoosing sound when it finally disappears
   - Transition between actor stages
     - seems cool but it might be hard given my current renderign workflow
 - better icons
