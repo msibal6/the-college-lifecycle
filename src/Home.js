@@ -4,10 +4,9 @@ import { growth } from './growth';
 import GoodBye from './GoodBye';
 
 function Home(props) {
-
     function isCollegeOver() {
-        for (var stage in props.college) {
-            for (var actor in props.college[stage]) {
+        for (let stage in props.college) {
+            for (let actor in props.college[stage]) {
                 if (props.college[stage][actor] !== growth.GONE) 
                     return false;
             }

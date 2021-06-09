@@ -1,6 +1,4 @@
-
 import Actor from "./Actor";
-
 import "./Sequoia37.css";
 
 function Sequoia37(props) {

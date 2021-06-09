@@ -9,7 +9,7 @@ import useSound from "use-sound";
 
 function Actor(props) {
   const [playWhoosh] = useSound(sounds.whoosh, { volume: 0.05 });
-  var usedId = props.id ? props.id : props.name;
+  const usedId = props.id ? props.id : props.name;
   if (props.college) {
     var collegeExperience = props.college;
   }

@@ -2,7 +2,6 @@ import "./Icon.css";
 import PropTypes from "prop-types";
 import Icon from "./Icon";
 import { useState } from "react";
-// import { useState } from "react";
 
 function IconBar(props) {
   const [selectedIcon, setSelectedIcon] = useState("");

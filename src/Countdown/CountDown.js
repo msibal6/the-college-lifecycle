@@ -4,7 +4,7 @@ import Clock from "./Clock";
 
 function CountDown(props) {
   function handleClick() {
-    console.log(props.name + "div called onclick");
+    console.log(props.name + " div called onclick");
   }
   
   return (

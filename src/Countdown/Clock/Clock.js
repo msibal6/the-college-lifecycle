@@ -39,7 +39,7 @@ function Clock(props) {
     }
   }
 
-// https://stackoverflow.com/questions/61007927/react-hooks-setinterval-memory-leak
+  // https://stackoverflow.com/questions/61007927/react-hooks-setinterval-memory-leak
   useEffect(() => {
     var interval = setInterval(() => getTimeUntil(props.deadline), 1000);
 
@@ -49,10 +49,6 @@ function Clock(props) {
       interval = null;
     };
   }, [props.deadline]);
-
-  // useEffect(() => {
-  //   setInterval(() => getTimeUntil(props.deadline), 1000);
-  // })
 
   return (
     <div className="Clock">

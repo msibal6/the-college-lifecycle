@@ -1,6 +1,4 @@
-import {
-  useHistory
-} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./Icon.css";
 import PropTypes from "prop-types";
 import * as Icons from "./Icons";
