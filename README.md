@@ -7,13 +7,12 @@
     * [yarn start](#yarn-start)
     * [yarn test](#yarn-test)
     * [yarn eject](#yarn-eject)
+
 # Introduction 
 What is this project?
 This is a web app counting down when we go (or at least when we change from one 
 chapter to the next). The changes from one stage to the other are not 
 immediately obvio, but they show themselves eventually... 
-
-
 
 # Feature Plan
 - UI Polish 
@@ -46,7 +45,7 @@ immediately obvio, but they show themselves eventually...
       - segmented liver
     - cursor gif
       - liver explosion
-  - joe sexson
+  - joe 
     - inactive icon
       - boat on river
     - active icon
@@ -68,15 +67,12 @@ immediately obvio, but they show themselves eventually...
 
 
 # React
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-
 In the project directory, you can run:
 
 ### `yarn start`
-
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
